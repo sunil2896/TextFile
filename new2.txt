@@ -1,0 +1,24 @@
+The apparent discrepancy between the PCIe Gen 4 speed of 16 GT/s and the Samsung SSD write speed of 5000 MB/s can be explained by understanding the specifics of PCIe data transfer and how these speeds are measured and utilized:
+
+1. **PCIe Gen 4 Bandwidth**:
+   - PCIe 4.0 operates at a transfer rate of 16 GT/s (Giga Transfers per second) per lane.
+   - This translates to 2 GB/s per lane in each direction (since each transfer involves 16 bits or 2 bytes).
+   - An x4 PCIe 4.0 interface, which is common for high-performance SSDs, would thus provide a theoretical maximum bandwidth of 8 GB/s (4 lanes x 2 GB/s per lane) in each direction.
+
+2. **Encoding Overhead**:
+   - PCIe 4.0 uses a more efficient encoding scheme (128b/130b) compared to PCIe 3.0 (8b/10b), which reduces the overhead.
+   - This means that nearly all the raw transfer rate is used for data transmission, with minimal loss to encoding.
+
+3. **Effective Data Transfer Rates**:
+   - The 16 GT/s raw transfer rate, considering the 128b/130b encoding efficiency, effectively translates to around 15.75 GB/s of usable bandwidth for data.
+   - For an x4 link, this results in a total usable bandwidth of approximately 7.88 GB/s.
+
+4. **Real-world Performance**:
+   - While the theoretical maximum is around 7.88 GB/s, real-world performance is typically lower due to various factors like protocol overhead, device inefficiencies, and system limitations.
+   - Samsung's 980 Pro, with a write speed of up to 5000 MB/s, is well within the practical limits of PCIe 4.0 x4 bandwidth. 
+
+5. **Device Design and Optimization**:
+   - Samsung SSDs are designed to take full advantage of the available bandwidth of the PCIe 4.0 interface.
+   - Advanced controller technology, firmware optimizations, and efficient NAND flash memory contribute to maximizing the performance within the constraints of the interface.
+
+Therefore, the write speed of 5000 MB/s for Samsung SSDs like the 980 Pro is a result of efficiently utilizing the PCIe Gen 4 x4 interface's potential, staying well within the theoretical and practical limits of its bandwidth capabilities.
