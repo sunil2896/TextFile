@@ -3,3 +3,5 @@ Random IO performance is not typically mentioned in terms of MBps (Megabytes per
 Random IO performance is crucial for workloads where the storage device needs to handle multiple small, random read and write requests simultaneously, such as database operations, virtualization, or file servers. In these scenarios, the speed at which the storage device can process these random IO operations (measured in IOPS) is more relevant than the sequential data transfer rate.
 
 While MBps is a useful metric for tasks like transferring large files or streaming media, it doesn't accurately reflect the performance characteristics of storage devices under random IO workloads. Therefore, random IO performance is typically discussed in terms of IOPS rather than MBps.
+
+
