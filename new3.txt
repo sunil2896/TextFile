@@ -1,0 +1,29 @@
+Garbage collection (GC) affects drive performance in various ways, especially in the context of solid-state drives (SSDs). Here's a breakdown of how garbage collection impacts drive performance:
+
+### 1. **Write Amplification**
+Garbage collection involves the process of cleaning up invalid or stale data to create free blocks for new data. This can lead to write amplification, where more data is written to the drive than the user actually requests. Write amplification can reduce the lifespan of an SSD and impact write performance.
+
+### 2. **Latency**
+During garbage collection, the drive might experience increased latency because the controller has to manage both the ongoing read/write requests and the garbage collection process. This can lead to slower response times for data access.
+
+### 3. **Performance Degradation**
+When the SSD is nearly full, garbage collection becomes more frequent and intensive, potentially leading to noticeable performance degradation. The drive has to move more data around to create free space, which consumes resources and time.
+
+### 4. **Wear Leveling**
+Garbage collection works in conjunction with wear leveling, which ensures that all memory cells are used evenly. While wear leveling helps in extending the drive's life, it also means more frequent garbage collection, especially if the drive is heavily used or near capacity, impacting performance.
+
+### 5. **Over-Provisioning**
+Manufacturers often include extra storage capacity (over-provisioning) that is not visible to the user. This extra space is used to improve performance and longevity by providing more room for garbage collection. Drives with higher over-provisioning typically handle garbage collection more efficiently, mitigating some performance impacts.
+
+### 6. **Firmware and Controller Efficiency**
+The efficiency of garbage collection is highly dependent on the drive's firmware and controller. Advanced algorithms and better hardware can manage garbage collection more effectively, reducing the impact on performance. High-end SSDs tend to have more sophisticated controllers that handle these tasks more seamlessly.
+
+### 7. **User Workload**
+The type of workload can influence how garbage collection affects performance. For instance, write-intensive applications can trigger more frequent garbage collection, while read-heavy workloads might be less affected.
+
+### Mitigation Strategies:
+- **Trim Command**: The TRIM command helps the SSD know which data blocks are no longer in use and can be erased, improving the efficiency of garbage collection.
+- **Over-Provisioning**: Allocating more over-provisioning space can help reduce the frequency and impact of garbage collection.
+- **Regular Maintenance**: Running optimization tools provided by the SSD manufacturer can help manage garbage collection more effectively.
+
+In summary, while garbage collection is essential for maintaining the health and performance of SSDs, it does introduce some overhead that can affect drive performance, particularly under heavy use or near full capacity.
