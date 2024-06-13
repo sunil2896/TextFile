@@ -1,35 +1,73 @@
-Sure, let's look at specific examples of SSDs where increased NAND dies have led to performance improvements:
+Comparing SSD speeds across different capacities (256 GB, 512 GB, and 1 TB) can illustrate how performance scales with increased NAND dies. Here are examples from popular SSD models to showcase these differences.
 
-### Samsung 970 EVO Plus
-- **500GB vs. 1TB Models**:
-  - The 500GB model typically has fewer NAND dies compared to the 1TB model.
-  - **Performance**:
-    - 500GB: Sequential Read/Write speeds up to 3,500/3,200 MB/s
-    - 1TB: Sequential Read/Write speeds up to 3,500/3,300 MB/s
-  - The 1TB model achieves slightly higher write speeds due to increased parallelism from more NAND dies.
+### **Samsung 970 EVO Plus NVMe SSD**
+**256 GB Version:**
+- **Read Speed:** Up to 3,500 MB/s
+- **Write Speed:** Up to 2,300 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 250,000/550,000
 
-### Western Digital WD Black SN750
-- **500GB vs. 1TB Models**:
-  - Similar to the Samsung 970 EVO Plus, the 1TB model has more NAND dies.
-  - **Performance**:
-    - 500GB: Sequential Read/Write speeds up to 3,430/2,600 MB/s
-    - 1TB: Sequential Read/Write speeds up to 3,470/3,000 MB/s
-  - Again, the 1TB model shows better write performance due to additional NAND dies allowing more efficient data interleaving and parallelism.
+**512 GB Version:**
+- **Read Speed:** Up to 3,500 MB/s
+- **Write Speed:** Up to 3,200 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 480,000/550,000
 
-### Crucial MX500
-- **500GB vs. 1TB Models**:
-  - Both use the same controller but differ in the number of NAND dies.
-  - **Performance**:
-    - 500GB: Sequential Read/Write speeds up to 560/510 MB/s
-    - 1TB: Sequential Read/Write speeds up to 560/510 MB/s
-  - While sequential performance is similar, the 1TB model may exhibit better sustained write performance and endurance due to the increased number of NAND dies.
+**1 TB Version:**
+- **Read Speed:** Up to 3,500 MB/s
+- **Write Speed:** Up to 3,300 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 620,000/560,000
 
-### Intel SSD 660p
-- **512GB vs. 1TB Models**:
-  - These SSDs utilize QLC NAND, which benefits significantly from more NAND dies.
-  - **Performance**:
-    - 512GB: Sequential Read/Write speeds up to 1,500/1,000 MB/s
-    - 1TB: Sequential Read/Write speeds up to 1,800/1,800 MB/s
-  - The 1TB model benefits from the increased NAND dies, showing substantial improvements in both read and write speeds.
+### **Western Digital WD Black SN850 NVMe SSD**
+**256 GB Version:**
+- **Read Speed:** Up to 7,000 MB/s
+- **Write Speed:** Up to 2,600 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 800,000/700,000
 
-In summary, increasing the number of NAND dies generally leads to better performance due to enhanced parallelism, improved bandwidth utilization, and more effective interleaving. These benefits are clearly observed in the higher capacity models of the same SSD series, which often show improved read/write speeds and better overall performance.
+**512 GB Version:**
+- **Read Speed:** Up to 7,000 MB/s
+- **Write Speed:** Up to 4,100 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 1,000,000/720,000
+
+**1 TB Version:**
+- **Read Speed:** Up to 7,000 MB/s
+- **Write Speed:** Up to 5,300 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 1,000,000/710,000
+
+### **Crucial MX500 SATA SSD**
+**250 GB Version:**
+- **Read Speed:** Up to 560 MB/s
+- **Write Speed:** Up to 510 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 95,000/90,000
+
+**500 GB Version:**
+- **Read Speed:** Up to 560 MB/s
+- **Write Speed:** Up to 510 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 90,000/85,000
+
+**1 TB Version:**
+- **Read Speed:** Up to 560 MB/s
+- **Write Speed:** Up to 510 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 95,000/90,000
+
+### **Samsung 860 QVO SATA SSD**
+**256 GB Version:**
+- **Read Speed:** Up to 550 MB/s
+- **Write Speed:** Up to 520 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 90,000/89,000
+
+**512 GB Version:**
+- **Read Speed:** Up to 550 MB/s
+- **Write Speed:** Up to 520 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 96,000/89,000
+
+**1 TB Version:**
+- **Read Speed:** Up to 550 MB/s
+- **Write Speed:** Up to 520 MB/s
+- **IOPS (4KB Random Read/Write):** Up to 97,000/89,000
+
+### Summary:
+1. **Higher Capacities Offer Better Write Speeds:** Across all examples, the 256 GB versions typically have lower write speeds compared to their 512 GB and 1 TB counterparts. This is because higher capacities often feature more NAND dies, allowing for increased parallelism in write operations.
+2. **Increased IOPS:** The IOPS (especially write IOPS) tend to be higher in larger capacity SSDs, thanks to the increased number of NAND dies, which enable more concurrent read/write operations.
+3. **Consistency in Read Speeds:** Read speeds often stay consistent across different capacities for high-performance SSDs like the Samsung 970 EVO Plus and WD Black SN850. However, SATA-based SSDs like the Crucial MX500 show minimal variance because the SATA interface is a limiting factor.
+4. **Economies of Scale:** Larger capacity SSDs leverage better economies of scale in NAND dies usage, translating to improved performance metrics, particularly in write speeds and IOPS.
+
+In conclusion, higher capacity SSDs typically provide better overall performance due to the increased number of NAND dies, which enhances data throughput and parallel processing capabilities.
