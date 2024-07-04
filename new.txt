@@ -1,73 +1,8 @@
-Comparing SSD speeds across different capacities (256 GB, 512 GB, and 1 TB) can illustrate how performance scales with increased NAND dies. Here are examples from popular SSD models to showcase these differences.
+The conversion of file transfers to NVMe (Non-Volatile Memory Express) commands when a host moves data to an NVMe SSD is typically handled by the NVMe driver and the operating system's storage stack. Here's a simplified breakdown of the process:
 
-### **Samsung 970 EVO Plus NVMe SSD**
-**256 GB Version:**
-- **Read Speed:** Up to 3,500 MB/s
-- **Write Speed:** Up to 2,300 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 250,000/550,000
+1. **File System Layer**: The host's file system receives the data transfer request.
+2. **Operating System**: The OS handles the file system request and prepares the data for transfer. This involves translating high-level file system operations into block-level I/O operations.
+3. **Storage Driver**: The NVMe driver, which is part of the OS, takes these block-level I/O operations and converts them into NVMe commands. These commands conform to the NVMe specification, which defines a command set and a protocol for communication with NVMe devices.
+4. **NVMe Controller**: The NVMe controller on the SSD receives the NVMe commands from the host and executes them to read or write data to the non-volatile memory.
 
-**512 GB Version:**
-- **Read Speed:** Up to 3,500 MB/s
-- **Write Speed:** Up to 3,200 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 480,000/550,000
-
-**1 TB Version:**
-- **Read Speed:** Up to 3,500 MB/s
-- **Write Speed:** Up to 3,300 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 620,000/560,000
-
-### **Western Digital WD Black SN850 NVMe SSD**
-**256 GB Version:**
-- **Read Speed:** Up to 7,000 MB/s
-- **Write Speed:** Up to 2,600 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 800,000/700,000
-
-**512 GB Version:**
-- **Read Speed:** Up to 7,000 MB/s
-- **Write Speed:** Up to 4,100 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 1,000,000/720,000
-
-**1 TB Version:**
-- **Read Speed:** Up to 7,000 MB/s
-- **Write Speed:** Up to 5,300 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 1,000,000/710,000
-
-### **Crucial MX500 SATA SSD**
-**250 GB Version:**
-- **Read Speed:** Up to 560 MB/s
-- **Write Speed:** Up to 510 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 95,000/90,000
-
-**500 GB Version:**
-- **Read Speed:** Up to 560 MB/s
-- **Write Speed:** Up to 510 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 90,000/85,000
-
-**1 TB Version:**
-- **Read Speed:** Up to 560 MB/s
-- **Write Speed:** Up to 510 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 95,000/90,000
-
-### **Samsung 860 QVO SATA SSD**
-**256 GB Version:**
-- **Read Speed:** Up to 550 MB/s
-- **Write Speed:** Up to 520 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 90,000/89,000
-
-**512 GB Version:**
-- **Read Speed:** Up to 550 MB/s
-- **Write Speed:** Up to 520 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 96,000/89,000
-
-**1 TB Version:**
-- **Read Speed:** Up to 550 MB/s
-- **Write Speed:** Up to 520 MB/s
-- **IOPS (4KB Random Read/Write):** Up to 97,000/89,000
-
-### Summary:
-1. **Higher Capacities Offer Better Write Speeds:** Across all examples, the 256 GB versions typically have lower write speeds compared to their 512 GB and 1 TB counterparts. This is because higher capacities often feature more NAND dies, allowing for increased parallelism in write operations.
-2. **Increased IOPS:** The IOPS (especially write IOPS) tend to be higher in larger capacity SSDs, thanks to the increased number of NAND dies, which enable more concurrent read/write operations.
-3. **Consistency in Read Speeds:** Read speeds often stay consistent across different capacities for high-performance SSDs like the Samsung 970 EVO Plus and WD Black SN850. However, SATA-based SSDs like the Crucial MX500 show minimal variance because the SATA interface is a limiting factor.
-4. **Economies of Scale:** Larger capacity SSDs leverage better economies of scale in NAND dies usage, translating to improved performance metrics, particularly in write speeds and IOPS.
-
-In conclusion, higher capacity SSDs typically provide better overall performance due to the increased number of NAND dies, which enhances data throughput and parallel processing capabilities.
+In summary, the NVMe driver in the operating system is primarily responsible for converting file transfers into NVMe commands that the NVMe SSD can understand and execute.
